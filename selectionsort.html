@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- head -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- title -->
+    <title>Sorting Visualizer - Selection Sort</title>
+
+    <!-- linking style.css -->
+    <link href="style_sort.css" rel="stylesheet" />
+  </head>
+
+  <!-- body -->
+  <body>
+    <section>
+      <div class="circle"></div>
+      <header>
+        <a href="#"><img src="logo.png" alt="logo" class="logo" /></a>
+        <ul class="navigation">
+          <li><a href="index.html">Home</a></li>
+          <!-- <li><a href="bubblesort.html">BubbleSort</a></li>
+          <li><a href="insertionsort.html">InsertionSort</a></li>
+          <li><a href="selectionsort.html">SelectionSort</a></li>
+          <li><a href="mergesort.html">MergeSort</a></li> -->
+          <li><a><span onclick="openNav()" style="cursor:pointer;">SortingAlgorithms</span></a></li>
+        </ul>
+        <div id="myNav" class="overlay">
+
+          <!-- Button to close the overlay navigation -->
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        
+          <!-- Overlay content -->
+          <div class="overlay-content">
+            <a href="bubblesort.html">BubbleSort</a>
+            <a href="insertionsort.html">InsertionSort</a>
+            <a href="selectionsort.html">SelectionSort</a>
+            <a href="heapsort.html">HeapSort</a>
+            <a href="mergesort.html">MergeSort</a>
+          </div>
+        
+        </div>
+      </header>
+      <img
+        src="selection1.svg"
+        alt=""
+        height="450"
+        width="600"
+        class="vector"
+      />
+      <div class="links">
+        <a href="#visualizer">Visualize</a>
+        <a href="#learn" style="margin-left: 20px">Learn</a>
+      </div>
+      <div id="learn">
+        <h2>Selection Sort Algorithm</h2>
+        <p>
+          The selection sort algorithm sorts an array by repeatedly finding the
+          minimum element (considering ascending order) from unsorted part and
+          putting it at the beginning. <br />The algorithm maintains two
+          subarrays in a given array. <br />1) The subarray which is already
+          sorted. <br />
+          2) Remaining subarray which is unsorted. In every iteration of
+          selection sort, the minimum element (considering ascending order) from
+          the unsorted subarray is picked and moved to the sorted subarray.
+          <br />
+          Following example explains the above steps:<br />
+          Example: <br /><br />
+          arr[] = 64 25 12 22 11 <br> // Find the minimum element in arr[0...4] <br> //
+          and place it at beginning <br> 11 25 12 22 64 <br><br>// Find the minimum element
+          in arr[1...4] <br>// and place it at beginning of arr[1...4] <br> 11 12 25 22
+          64 <br><br>// Find the minimum element in arr[2...4] <br>// and place it at
+          beginning of arr[2...4] <br>11 12 22 25 64 <br><br>// Find the minimum element in
+          arr[3...4] <br>// and place it at beginning of arr[3...4] <br>11 12 22 25 64<br><br>
+        </p>
+        <div class="links">
+          <a
+            href="https://www.geeksforgeeks.org/selection-sort/"
+            style="margin: 0 auto; float: right"
+            >Read More...</a
+          >
+        </div>
+      </div>
+      <section class="head" id="visualizer">Selection Sort Visualizer</section>
+
+      <section class="contentContainer" >
+        <section class="data-container"></section>
+      </section>
+
+      <!-- "Generate New Array" button -->
+      <button class="btn btn1" onclick="generate()" id="Button1">
+        Generate New Array
+      </button>
+
+      <!-- "Selection Sort" button -->
+      <button class="btn btn2" onclick="SelectionSort(),disable()" id="Button2">
+        Selection Sort
+      </button>
+
+      <!-- stop -->
+      <button class="btn btn3" onclick="reset()" id="Button1">Reset</button>
+      <a href="#" style="display: inline-block;width:50px;height:50px;text-align:center;padding-top:15px;margin-left:200px;background-color:#e51e2a;text-decoration:none;color:black;border-radius:50%;">Top</a>
+
+    </section>
+	<footer>
+    <a href="#"><img src="logo.png" alt="logo" class="logo" /></a>
+        <br>
+        <p>&copy;All Rights Reserved.</p>
+    </footer>
+  </body>
+  <script>
+    /* Open when someone clicks on the span element */
+function openNav() {
+document.getElementById("myNav").style.width = "100%";
+}
+
+/* Close when someone clicks on the "x" symbol inside the overlay */
+function closeNav() {
+document.getElementById("myNav").style.width = "0%";
+}
+  </script>
+
+  <!-- linking index.js -->
+  <script src="script_ss.js"></script>
+</html>

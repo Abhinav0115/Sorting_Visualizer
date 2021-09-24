@@ -1,0 +1,152 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<link rel="stylesheet" href="heapsort.css" />
+</head>
+
+<body>
+	<br />
+	<p class="header">Heap Sort</p>
+
+	<script src="script_hs.js"></script>
+</body> -->
+
+</html>
+<!DOCTYPE html>
+<html lang="en">
+  <!-- head -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- title -->
+    <title>Sorting Visualizer - Heap Sort</title>
+
+    <!-- linking style.css -->
+    <link href="style_sort.css" rel="stylesheet" />
+    <!-- <link rel="stylesheet" href=".css"> -->
+  </head>
+
+  <!-- body -->
+  <body>
+    <section>
+      <div class="circle"></div>
+      <header>
+        <a href="#"><img src="logo.png" alt="logo" class="logo" /></a>
+        <ul class="navigation">
+          <li><a href="index.html">Home</a></li>
+          <!-- <li><a href="bubblesort.html">BubbleSort</a></li>
+          <li><a href="insertionsort.html">InsertionSort</a></li>
+          <li><a href="selectionsort.html">SelectionSort</a></li>
+          <li><a href="mergesort.html">MergeSort</a></li> -->
+          <li><a><span onclick="openNav()" style="cursor:pointer;">SortingAlgorithms</span></a></li>
+
+        </ul>
+        <div id="myNav" class="overlay">
+
+            <!-- Button to close the overlay navigation -->
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          
+            <!-- Overlay content -->
+            <div class="overlay-content">
+              <a href="bubblesort.html">BubbleSort</a>
+              <a href="insertionsort.html">InsertionSort</a>
+              <a href="selectionsort.html">SelectionSort</a>
+              <a href="heapsort.html">HeapSort</a>
+              <a href="mergesort.html">MergeSort</a>
+            </div>
+          
+          </div>
+      </header>
+      <img src="bubble.svg" alt="" height="450" width="600" class="vector" />
+      <div class="links">
+        <a href="#visualizer">Visualize</a>
+        <a href="#learn" style="margin-left: 20px">Learn</a>
+      </div>
+	  <div id="learn">
+        <h2>Heap Sort Algorithm</h2>
+        <p>
+			Heap sort is a comparison based sorting technique based on 
+            Binary Heap data structure. It is similar to selection sort
+             where we first find the minimum element and place the minimum 
+             element at the beginning. We repeat the same process for the remaining elements. <br><br>
+
+             Let us first define a Complete Binary Tree. A complete binary tree is a binary tree in which every level, except possibly the last, is completely filled, and all nodes are as far left as possible (Source Wikipedia)
+             A Binary Heap is a Complete Binary Tree where items are stored in a special order such that value in a parent node is greater(or smaller) than the values in its two children nodes. The former is called as max heap and the latter is called min-heap. The heap can be represented by a binary tree or array.
+             <br><br>
+             Why array based representation for Binary Heap? <br>
+             Since a Binary Heap is a Complete Binary Tree, it can be easily represented as an array and the array-based representation is space-efficient. If the parent node is stored at index I, the left child can be calculated by 2 * I + 1 and right child by 2 * I + 2 (assuming the indexing starts at 0).
+             <br><br>
+             Heap Sort Algorithm for sorting in increasing order: <br>
+             1. Build a max heap from the input data. <br>
+             2. At this point, the largest item is stored at the root of the heap. Replace it with the last item of the heap followed by reducing the size of heap by 1. Finally, heapify the root of the tree. 
+            <br> 3. Repeat step 2 while size of heap is greater than 1. <br>
+             <br>
+             How to build the heap? 
+             <br>
+             Heapify procedure can be applied to a node only if its children nodes are heapified. So the heapification must be performed in the bottom-up order.
+             Lets understand with the help of an example: <br><br>
+             <img src="heapify.PNG" alt="Heap Sort Example" height=500 width=500>
+
+            
+             
+             
+		</p>
+		<div class="links"><a href="https://www.geeksforgeeks.org/heap-sort/" style="margin:0 auto; float:right;margin-bottom:20px;">Read More...</a></div>
+      </div>
+      <section class="head" id="visualizer">Heap Sort Visualizer</section>
+<!--       
+	<div id="array"></div>
+	<div id="count"></div> -->
+
+      <section class="contentContainer" >
+        <section class="data-container">
+            
+<!--             
+	<div id="array"></div>
+	<div id="count"></div> -->
+        </section>
+        <div id="count"></div>
+      </section>
+
+      <!-- "Generate New Array" button -->
+      <button class="btn btn1" onclick="generate()" id="Button1">
+        Generate New Array
+      </button>
+
+      <!-- "Selection Sort" button -->
+      <button class="btn btn2" onclick="HeapSort(20),disable()" id="Button2">
+        HeapSort
+      </button>
+
+      <!-- stop -->
+      <button class="btn btn3" onclick="reset()" id="Button1">Reset</button>
+      <a href="#" style="display: inline-block;width:50px;height:50px;text-align:center;padding-top:15px;margin-left:200px;background-color:#e51e2a;text-decoration:none;color:black;border-radius:50%;">Top</a>
+
+    </section>
+	<footer>
+    <a href="#"><img src="logo.png" alt="logo" class="logo" /></a>
+        <br>
+        <p>&copy;All Rights Reserved.</p>
+    </footer>
+    
+  <script src="script_hs.js"></script>
+  <script>
+    /* Open when someone clicks on the span element */
+function openNav() {
+document.getElementById("myNav").style.width = "100%";
+}
+
+/* Close when someone clicks on the "x" symbol inside the overlay */
+function closeNav() {
+document.getElementById("myNav").style.width = "0%";
+}
+  </script>
+  </body>
+
+  <!-- linking index.js
+  <script src="script_hs.js"></script> -->
+</html>
+

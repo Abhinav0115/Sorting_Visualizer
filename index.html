@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sorting Visualizer</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section>
+      <div class="circle"></div>
+      <header>
+        <a href="#"><img src="logo.png" alt="logo" class="logo" style="margin-top: 0;" /></a>
+        <ul class="navigation">
+           <li><a href="index.html">Home</a></li> 
+          <!-- <li><a href="bubblesort.html">BubbleSort</a></li>
+          <li><a href="insertionsort.html">InsertionSort</a></li>
+          <li><a href="selectionsort.html">SelectionSort</a></li>
+          <li><a href="mergesort.html">MergeSort</a></li> -->
+          <!-- <li><a href="heapsort.html">Heap Sort</a></li>  -->
+          <!-- <span onclick="openNav()">open</span> -->
+          <li><a><span onclick="openNav()" style="cursor:pointer;">SortingAlgorithms</span></a></li>
+        </ul>
+        <!-- The overlay -->
+<div id="myNav" class="overlay">
+
+  <!-- Button to close the overlay navigation -->
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+  <!-- Overlay content -->
+  <div class="overlay-content">
+    <a href="bubblesort.html">BubbleSort</a>
+    <a href="insertionsort.html">InsertionSort</a>
+    <a href="selectionsort.html">SelectionSort</a>
+    <a href="heapsort.html">HeapSort</a>
+    <a href="mergesort.html">MergeSort</a>
+  </div>
+
+</div>
+
+<!-- Use any element to open/show the overlay navigation menu -->
+
+        <!-- <a href="#"><img src="logo.png" alt="logo" class="logo" style="margin-top: 0;" /></a> -->
+      </header>
+      <div class="content">
+        <div class="textBox">
+          <h2>Visualize the Algorithm</h2>
+          <p>
+            Learn the Algorithms by visualising them.
+          </p>
+          <a href="https://www.geeksforgeeks.org/sorting-algorithms/" style="margin-left: 20px"">Learn more</a>
+        </div>
+      </div>
+      <ul class="sci">
+        <li>
+          <a href="#"><img src="fb.png" alt="facebook" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="insta.png" alt="instagram" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="twitter.png" alt="twitter" /></a>
+        </li>
+      </ul>
+    </section>
+    <footer>
+      <a href="#"><img src="logo.png" alt="logo" class="logo" /></a>
+        <br><br>
+        <p>&copy;All Rights Reserved.</p>
+    </footer>
+    <script>
+      /* Open when someone clicks on the span element */
+function openNav() {
+  document.getElementById("myNav").style.width = "100%";
+}
+
+/* Close when someone clicks on the "x" symbol inside the overlay */
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+    </script>
+  </body>
+</html>
